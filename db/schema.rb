@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421025500) do
+ActiveRecord::Schema.define(version: 20160421083309) do
+
+  create_table "events", force: :cascade do |t|
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "title"
+    t.text     "description"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.string   "organization"
+    t.datetime "starttime"
+  end
 
   create_table "organizations", force: :cascade do |t|
     t.datetime "created_at",                          null: false
@@ -26,6 +37,8 @@ ActiveRecord::Schema.define(version: 20160421025500) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "password"
   end
 
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true
@@ -44,6 +57,8 @@ ActiveRecord::Schema.define(version: 20160421025500) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "password"
+    t.string   "name"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true
