@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :leaders
   root to: 'home#index'
   devise_for :organizations
   devise_for :students
   resources :organizations
   resources :students
+  resources :leaders
   resources :events
   
   # The priority is based upon order of creation: first created -> highest priority.

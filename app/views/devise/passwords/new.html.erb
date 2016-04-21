@@ -36,12 +36,17 @@
           <li><a href="#about">Profile</a></li>
           <li><%= link_to "Logout", destroy_student_session_path, :method => :delete %></li>
         <% end %>
-        <% if not current_student and not current_organization %>
+        <% if current_leader %>
+          <li><%= link_to "Profile", leader_path(current_leader), :method => :get %></li>
+          <li><%= link_to "Logout", destroy_leader_session_path, :method => :delete %></li>
+        <% end %>
+        <% if not current_student and not current_organization and not current_leader %>
           <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to "As Student", new_student_session_path, :method => :get %></li>
             <li><%= link_to "As Organization", new_organization_session_path, :method => :get %></li>
+            <li><%= link_to "As Group Leader", new_leader_session_path, :method => :get %></li>
           </ul>
         <% end %>
       </ul>
