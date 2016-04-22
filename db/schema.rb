@@ -12,6 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160421225901) do
 =======
 ActiveRecord::Schema.define(version: 20160421083309) do
@@ -27,6 +28,9 @@ ActiveRecord::Schema.define(version: 20160421083309) do
     t.string   "organization"
     t.datetime "starttime"
   end
+=======
+ActiveRecord::Schema.define(version: 20160421025500) do
+>>>>>>> parent of faeec25... Reformat login/signup/password pages, begin show profile page, add event model
 
 <<<<<<< HEAD
   create_table "leaders", force: :cascade do |t|
@@ -62,8 +66,6 @@ ActiveRecord::Schema.define(version: 20160421083309) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "name"
-    t.string   "password"
   end
 
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true
@@ -82,8 +84,6 @@ ActiveRecord::Schema.define(version: 20160421083309) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.string   "password"
-    t.string   "name"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true
