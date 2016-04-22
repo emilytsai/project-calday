@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160421225901) do
-=======
 ActiveRecord::Schema.define(version: 20160421083309) do
->>>>>>> parent of b0a6140... Create leader model
 
   create_table "events", force: :cascade do |t|
     t.datetime "created_at",   null: false
@@ -28,31 +23,7 @@ ActiveRecord::Schema.define(version: 20160421083309) do
     t.string   "organization"
     t.datetime "starttime"
   end
-=======
-ActiveRecord::Schema.define(version: 20160421025500) do
->>>>>>> parent of faeec25... Reformat login/signup/password pages, begin show profile page, add event model
 
-<<<<<<< HEAD
-  create_table "leaders", force: :cascade do |t|
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-  end
-
-  add_index "leaders", ["email"], name: "index_leaders_on_email", unique: true
-  add_index "leaders", ["reset_password_token"], name: "index_leaders_on_reset_password_token", unique: true
-
-=======
->>>>>>> parent of b0a6140... Create leader model
   create_table "organizations", force: :cascade do |t|
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
@@ -66,6 +37,8 @@ ActiveRecord::Schema.define(version: 20160421025500) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
+    t.string   "password"
   end
 
   add_index "organizations", ["email"], name: "index_organizations_on_email", unique: true
@@ -84,6 +57,8 @@ ActiveRecord::Schema.define(version: 20160421025500) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "password"
+    t.string   "name"
   end
 
   add_index "students", ["email"], name: "index_students_on_email", unique: true
