@@ -64,8 +64,7 @@
 	<% if current_student or current_organization %>
 		<h2>All Events:</h2>
 		<% @events.each do |f| %>
-		<h3><%= f.title + " | " + f.organization %></h3>
-		<p><%= f.description %></p>
+      <h3><%= f.title + " | " + f.organization %></h3>
 		<% end %>
 	<% end %>
 
