@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160421225901) do
+=======
+ActiveRecord::Schema.define(version: 20160421083309) do
+>>>>>>> parent of b0a6140... Create leader model
 
   create_table "events", force: :cascade do |t|
     t.datetime "created_at",   null: false
@@ -24,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160421225901) do
     t.datetime "starttime"
   end
 
+<<<<<<< HEAD
   create_table "leaders", force: :cascade do |t|
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
@@ -42,6 +47,8 @@ ActiveRecord::Schema.define(version: 20160421225901) do
   add_index "leaders", ["email"], name: "index_leaders_on_email", unique: true
   add_index "leaders", ["reset_password_token"], name: "index_leaders_on_reset_password_token", unique: true
 
+=======
+>>>>>>> parent of b0a6140... Create leader model
   create_table "organizations", force: :cascade do |t|
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
