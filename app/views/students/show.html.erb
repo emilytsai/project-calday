@@ -34,7 +34,7 @@
         <% end %>
         <% if current_organization %>
           <li><a href="#about">Profile</a></li>
-          <li><%= link_to "Logout", destroy_student_session_path, :method => :delete %></li>
+          <li><%= link_to "Logout", destroy_organization_session_path, :method => :delete %></li>
         <% end %>
         <% if current_leader %>
           <li><%= link_to "Profile", leader_path(current_leader), :method => :get %></li>
