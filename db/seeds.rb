@@ -27,10 +27,6 @@ end
 end
 
 #Make Event
-%w(MeetAndGreet Luncheon Presentation Hackathon).each do |name|
-	Event.create title: name, starttime: DateTime.current(), description: "Event hosted by a club on campus", longitude: rand(20..30), latitude: rand(40..50), organization: rand(0..3)
-end
-
-%w(Showcase).each do |name|
-	Event.create title: name, starttime: DateTime.current(), description: "Event hosted by a club on campus", longitude: rand(20..30), latitude: rand(40..50), organization: "Danceworx"
+%w(MeetAndGreet Showcase Luncheon Presentation Hackathon).each do |name|
+	Event.create title: name, starttime: rand(0..23), description: "Event hosted by a club on campus", longitude: -122-(rand(2545..2660)*0.0001), latitude: 37+(0.0001*rand(8680..8750)), organization: rand(1..4)
 end

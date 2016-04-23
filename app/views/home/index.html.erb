@@ -11,39 +11,55 @@
 </head>
 
 <body>
-<!-- Fixed navbar -->
 
 <div class="container theme-showcase" role="main">
   <div class="jumbotron">
-<h1>Welcome!</h1>
+  <h1 style="text-align: center;">Welcome to Cal Day!</h1>
 
 	<% if not current_organization and not current_student and not current_leader %>
-		<h2>I am a(n):</h2>
 		<div class="row">
-	      	<div class="col-sm-4">
-	      	<p><%= button_to "Student", new_student_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
-	      	<p><%= button_to "Organization", new_organization_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
-          <p><%= button_to "Group Leader", new_leader_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
-	      	</div><!-- /.col-sm-4 -->
-	      </div>
+      <div class="col-md-6" style="text-align: center;">
+        <h2>Sign Up</h2>
+        <h3>I am a(n):</h3>
+      	<p><%= button_to "Student", new_student_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+      	<p><%= button_to "Organization", new_organization_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+        <p><%= button_to "Group Leader", new_leader_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+    	</div><!-- /.col-sm-4 -->
+      
+      <div class="col-md-6" style="text-align: center;">
+        <h2>Sign In</h2>
+        <h3>I am a(n):</h3>
+        <p><%= button_to "Student", new_student_session_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+        <p><%= button_to "Organization", new_organization_session_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+        <p><%= button_to "Group Leader", new_leader_session_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+      </div><!-- /.col-sm-4 -->
+    </div>
 	<% end %> 	
 	<% if current_student or current_organization or current_leader %>
 		<h2>All Events:</h2>
 		<% @events.each do |f| %>
-      <h3><%= f.title + " | " + f.organization %></h3>
+      <h3><%= f.title + " | " + Organization.find(f.organization).name %></h3>
 		<% end %>
-
-<!--     <div style="width: 800px;">
-      <div id="map" style="width: 400px; height: 400px;"></div>
+    <hr>
+    <div style="width: 800px;">
+      <div id="map" style="width: 100%; height: 500px;"></div>
     </div>
     <script type="text/javascript">
       var handler = Gmaps.build('Google');
       handler.buildMap({ provider: {disableDefaultUI: true }, internal: {id: 'map'}}, function(){
         var json = [
-          {"lat":37.8710,"lng":-120.2591, infowindow: 'HKN presentation' },
-          {"lat":37.8736,"lng":-121.2542, infowindow: 'HKN Hackathon' },
-          {"lat":37.8691,"lng":-122.2542, infowindow: 'DWX Showcase' }
+          {"lat":37.8750,"lng":-122.2545, infowindow: 'HKN Hackathon' },
+          {"lat":37.8710,"lng":-122.2591, infowindow: 'HKN Presentation' },
+          {"lat":37.8680,"lng":-122.2660, infowindow: 'DWX Showcase' }
         ];
+        <% @events.each do |f| %>
+          var data = {
+          "lat": ${f.latitude},
+          "lng": ${f.longitude},
+          infowindow: ${f.title}
+          };
+          json.push(data);
+        <% end %>
         markers = handler.addMarkers(json);
         handler.bounds.extendWith(markers);
         _.each(markers, function(marker){
@@ -51,7 +67,7 @@
         });
         handler.fitMapToBounds();     
       });
-    </script> -->
+    </script>
 
 	<% end %>
 

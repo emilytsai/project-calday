@@ -1,8 +1,21 @@
-<div class="container" style="width: 300px">
-  <h2>Create An Event</h2>
+<div class="container">
+  <h2>My Events</h2>
+  <hr>
+  <% @events.each do |f| %>
+    <% if f.organization == current_organization.id %>
+      <h4>Event Title: <%= f.title %><h4>
+      <h4>Event Description: <%= f.description %><h4>
+      <h4>Start Time: <%= f.starttime %>:00<h4>
+    <hr>
+    <% end %>
+  <% end %>
+</div>
+<div class="container" style="width: 300px; border-style: solid; padding: 15px; padding-bottom: 40px;">
+  <h2>Create New Event</h2>
   <%= simple_form_for @event do |f| %>
-    <p>Title:</p><p><%= f.input_field :title, placeholder: 'e.g. Hackathon' %></p>
-    <p>Description:</p><p><%= f.input_field :description, as: :text, placeholder: 'e.g. A place where Coders, Designers, Dreamers alike come together to build and create something beautiful.', :input_html => { :cols => 50, :rows => 5 } %></p>
+    <p>Title:</p><p><%= f.input_field :title %></p>
+    <p>Description:</p><p><%= f.input_field :description %></p>
+    <p>Start Time:</p><p><%= f.input_field :starttime %>:00 (Military time) Input a value 0-23.</p>
     <%= f.button :submit %>
   <% end %>
 </div>

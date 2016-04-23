@@ -22,6 +22,8 @@ gem 'simple_form'
 gem 'gmaps4rails'
 # Use Underscore Rails
 gem 'underscore-rails'
+# Use Gon
+gem 'gon'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
