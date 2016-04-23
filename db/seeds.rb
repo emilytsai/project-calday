@@ -28,5 +28,5 @@ end
 
 #Make Event
 %w(MeetAndGreet Showcase Luncheon Presentation Hackathon).each do |name|
-	Event.create title: name, starttime: rand(0..23), description: "Event hosted by a club on campus", longitude: -122-(rand(2545..2660)*0.0001), latitude: 37+(0.0001*rand(8680..8750)), organization: rand(1..4)
+	Event.create title: name, starttime: rand(0..23), description: "Event hosted by a club on campus", longitude: -122-(rand(2545..2660)*0.0001), latitude: 37+(0.0001*rand(8685..8750)), organization: rand(1..4)
 end

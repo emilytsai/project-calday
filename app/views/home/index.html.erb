@@ -47,19 +47,10 @@
     <script type="text/javascript">
       var handler = Gmaps.build('Google');
       handler.buildMap({ provider: {disableDefaultUI: true }, internal: {id: 'map'}}, function(){
-        var json = [
-          {"lat":37.8750,"lng":-122.2545, infowindow: 'HKN Hackathon' },
-          {"lat":37.8710,"lng":-122.2591, infowindow: 'HKN Presentation' },
-          {"lat":37.8680,"lng":-122.2660, infowindow: 'DWX Showcase' }
-        ];
-        <% @events.each do |f| %>
-          var data = {
-          "lat": ${f.latitude},
-          "lng": ${f.longitude},
-          infowindow: ${f.title}
-          };
-          json.push(data);
-        <% end %>
+        var json = [];
+        while (gon.firstlat.length >= 1) {
+          json.push({"lat":gon.firstlat.pop(), "lng":gon.firstlong.pop(), infowindow:gon.title.pop()});
+        }
         markers = handler.addMarkers(json);
         handler.bounds.extendWith(markers);
         _.each(markers, function(marker){
