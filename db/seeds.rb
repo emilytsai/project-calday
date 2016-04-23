@@ -18,12 +18,12 @@ end
 
 #Make Organization part 1
 %w(Danceworx AFX).each do |name|
-	Organization.create name: name, description: "A major dance club on campus.", email:name+"@email.com", password:'password'
+	Organization.create name: name, description: "A major dance club on campus.", email:name+"@email.com", password:'password', category:"Dance"
 end
 
 #Make Organization part 2
 %w(CSM HKN).each do |name|
-	Organization.create name: name, description: "A STEM club on campus that provides STEM community/assistance to students.", email:name+"@email.com", password:'password'
+	Organization.create name: name, description: "A STEM club on campus that serves as a community to students interested in STEM.", email:name+"@email.com", password:'password', category:"STEM"
 end
 
 #Make Event

@@ -9,7 +9,7 @@
     <%= f.text_field :name, autofocus: true %>
   </div>
 
-  <% if resource_name == :student or resource_name = :leader %>
+  <% if resource_name == :student or resource_name == :leader %>
     <div class="field">
       <%= f.label :year %><br />
       <%= f.text_field :year %>
@@ -28,8 +28,8 @@
 
   <% if resource_name == :organization %>
     <div class="field">
-      <%= f.label :type %><br />
-      <%= f.text_field :type %>
+      <%= f.label :category %><br />
+      <%= f.text_field :category %>
     </div>
 
     <div class="field">

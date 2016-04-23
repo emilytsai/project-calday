@@ -6,4 +6,6 @@ class Event < ActiveRecord::Base
 	validates :starttime, presence: true
 	validates :organization, presence: true
 
+	has_many :schedules
+	has_many :students, :through => :schedules
 end

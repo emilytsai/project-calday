@@ -26,6 +26,11 @@ class EventsController < ApplicationController
 		end
 	end
 
+	def index
+		@user = current_student
+		@events = @user.events
+	end
+
 	private
 	def event_params
 		params.require(:event).permit(:title, :description, :starttime)
