@@ -23,7 +23,7 @@
       </div>
 
       <div class="form-group">
-        <%= f.label :SID %><br />
+        <%= f.label :SID, "SID" %><br />
         <%= f.number_field :SID, class: 'form-control' %>
       </div>
     <% end %>
@@ -41,12 +41,12 @@
     <% end %>
 
     <div class="form-group">
-      <%= f.label :email %><br />
+      <%= f.label :email, "Email*" %><br />
       <%= f.email_field :email, class: 'form-control' %>
     </div>
 
     <div class="form-group">
-      <%= f.label :password %>
+      <%= f.label :password, "Password*" %>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
@@ -54,9 +54,11 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation, "Password Confirmation*" %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
     </div>
+
+    <p>*Required fields</p>
 
     <div class="actions">
       <%= f.submit "Sign up" %>
