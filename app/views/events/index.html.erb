@@ -1,0 +1,10 @@
+<div class="container">
+  <h2>My Events</h2>
+  <hr>
+  <% @events.each do |f| %>
+    <h4>Event Title: <%= f.title %><h4>
+    <h4>Event Description: <%= f.description %><h4>
+    <h4>Start Time: <%= f.starttime %>:00<h4>
+    <hr>
+  <% end %>
+</div>
