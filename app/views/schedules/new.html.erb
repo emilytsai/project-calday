@@ -15,18 +15,15 @@
 
       <div class="container" style="width: 60%;">
       <%= form_tag @schedule do |f| %>
-        <div>
           <h2>All Events:</h2>
+          <h5>Checkmark boxes to save events to My Events.</h5>
           <% @events.each do |event| %>
              <h4>
-             <label>
                 <%= check_box_tag "event_ids[]", event.id %>
                 <%= "Event: " + event.title + " | Hosted by: " + Organization.find(event.organization).name + " | Time: #{event.starttime}:00" %>
-             </label>
+                <h5 style="margin-left: 20px;"><%= event.description %></p>
              </h4>
           <% end %>
-        </div>
-
         <div class="actions">
           <%= submit_tag "Save to my events" %> 
         </div>
