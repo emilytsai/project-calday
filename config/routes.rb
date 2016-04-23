@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root to: 'home#index'
-  devise_for :leaders
-  devise_for :organizations
-  devise_for :students
+  devise_for :leaders, controllers: { registrations: "leader_registrations" }
+  devise_for :organizations, controllers: { registrations: "org_registrations" }
+  devise_for :students, controllers: { registrations: "registrations" }
   resources :leaders
   resources :students
   resources :events

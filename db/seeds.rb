@@ -8,7 +8,7 @@
 
 #Make Leader
 %w(Juno Howard Warren Hubert).each do |name|
-	Leader.create name: name, major: "CS", SID: rand(4000..5000), email:name+"@email.com", password:'password'
+	Leader.create name: name, year: rand(1..4), major: "CS", SID: rand(4000..5000), email:name+"@email.com", password:'password'
 end
 
 #Make Student
@@ -28,5 +28,5 @@ end
 
 #Make Event
 %w(MeetAndGreet Showcase Luncheon Presentation Hackathon).each do |name|
-	Event.create title: name, starttime: rand(0..23), description: "Event hosted by a club on campus", longitude: -122-(rand(2545..2660)*0.0001), latitude: 37+(0.0001*rand(8685..8750)), organization: rand(1..4)
+	Event.create title: name, starttime: rand(0..23), description: "A "+name+" hosted by a club on campus", longitude: -122-(rand(2545..2660)*0.0001), latitude: 37+(0.0001*rand(8685..8750)), organization: rand(1..4)
 end

@@ -19,13 +19,13 @@
 
 <body>
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <%= link_to "Cal Day Scheduler", root_path, :method => :get, class: "navbar-brand" %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" style="float: right;">
         <li><%= link_to "Home", root_path, :method => :get %></li>
         <% if current_student %>
           <li><%= link_to "Profile", student_path(current_student), :method => :get %></li>
@@ -56,4 +56,10 @@
 
 <%= yield %>
 
+<div class="footer" style="background-color: white; padding: 15px; padding-top: 20px; margin-top: 30px; border-top: solid; border-width: 0.5px">
+  <div class="container">
+  <p class="text-muted" style="color: black; text-align: center;">Copyright 2016 | Team ACEE</p>
+  </div>
+</div>
+</body>
 </html>

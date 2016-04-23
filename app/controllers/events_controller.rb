@@ -9,6 +9,7 @@ class EventsController < ApplicationController
 
 	def new
 		@event = Event.new
+		@events = Event.all
 	end
 
 	def create
@@ -18,7 +19,7 @@ class EventsController < ApplicationController
 		@event.latitude = 37+(0.0001*rand(8680..8750))
 		if @event.save
 			flash[:notice] = "Event created!"
-			redirect_to organization_path(current_organization)
+			redirect_to new_event_path
 		else
 			flash[:error] = @event.errors.full_messages.to_sentence
 			redirect_to :back
