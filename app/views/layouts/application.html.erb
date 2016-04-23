@@ -24,17 +24,17 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "Home", root_path, :method => :get %></li>
+        <li><%= link_to "Home", root_path, :method => :get %></li>
         <% if current_student %>
           <li><%= link_to "Profile", student_path(current_student), :method => :get %></li>
           <li><%= link_to "Logout", destroy_student_session_path, :method => :delete %></li>
         <% end %>
         <% if current_organization %>
-          <li><a href="#about">Profile</a></li>
+          <li><%= link_to "Profile", organization_path(current_organization), :method => :get %></li>
           <li><%= link_to "Logout", destroy_organization_session_path, :method => :delete %></li>
         <% end %>
         <% if current_leader %>
-          <li><a href="#about">Profile</a></li>
+          <li><%= link_to "Profile", leader_path(current_leader), :method => :get %></li>
           <li><%= link_to "Logout", destroy_leader_session_path, :method => :delete %></li>
         <% end %>
         <% if not current_student and not current_organization and not current_leader %>
