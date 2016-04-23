@@ -1,0 +1,8 @@
+<div class="container">
+	<h2>Profile</h2>
+	<p>Name: <%= current_organization.name if current_organization.name %></p>
+	<p>Email: <%= current_organization.email if current_organization.email %></p>
+  <p>Type: <%= current_organization.type if current_organization.type %></p>
+  <p>Description: <%= current_organization.description if current_organization.description %></p>
+  <p><%= button_to "Edit Profile", edit_organization_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+</div>

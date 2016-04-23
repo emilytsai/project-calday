@@ -18,6 +18,10 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 # Use Simple Form
 gem 'simple_form'
+# Use Google Maps
+gem 'gmaps4rails'
+# Use Underscore Rails
+gem 'underscore-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

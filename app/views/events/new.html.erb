@@ -1,0 +1,8 @@
+<div class="container" style="width: 300px">
+  <h2>Create An Event</h2>
+  <%= simple_form_for @event do |f| %>
+    <p>Title:</p><p><%= f.input_field :title, placeholder: 'e.g. Hackathon' %></p>
+    <p>Description:</p><p><%= f.input_field :description, as: :text, placeholder: 'e.g. A place where Coders, Designers, Dreamers alike come together to build and create something beautiful.', :input_html => { :cols => 50, :rows => 5 } %></p>
+    <%= f.button :submit %>
+  <% end %>
+</div>
