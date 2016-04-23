@@ -1,5 +1,9 @@
-<h1>  NAME: <%=current_leader.name%></h1>
-<h1>  EMAIL: <%=current_leader.email%></h1>
-<h1>  MAJOR: <%=current_leader.major%></h1>
-<h1>  SID: <%=current_leader.SID%></h1>
-<p><%= button_to "Edit Profile", edit_leader_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+<div class="container">
+	<h2>Profile</h2>
+	<p>Name: <%= current_leader.name if current_leader.name %></p>
+	<p>Email: <%= current_leader.email if current_leader.email %></p>
+  <p>Year: <%= current_leader.year if current_leader.year %></p>
+  <p>Major: <%= current_leader.major if current_leader.major %></p>
+  <p>SID: <%= current_leader.SID if current_leader.SID %></p>
+  <p><%= button_to "Edit Profile", edit_leader_registration_path, :class => "btn btn-lg btn-default", :method => :get %></p>
+</div>
