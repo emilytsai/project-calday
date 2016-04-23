@@ -35,39 +35,34 @@
       </div><!-- /.col-sm-4 -->
     </div>
 	<% end %> 	
-	<% if current_student or current_organization or current_leader %>
+	<% if current_organization or current_leader %>
     <div class="container" style="text-align: center;">
-		<h2>All Events:</h2>
-		<% @events.each do |f| %>
-      <h4><%= "Event: " + f.title + " | Hosted by: " + Organization.find(f.organization).name + " | Time: #{f.starttime}:00" %></h4>
-		<% end %>
-    <hr>
-    <div style="padding-left: 10%; padding-right: 10%;">
-      <div id="map" style="width: 100%; height: 500px;"></div>
+  		<h2>All Events:</h2>
+  		<% @events.each do |f| %>
+        <h4><%= "Event: " + f.title + " | Hosted by: " + Organization.find(f.organization).name + " | Time: #{f.starttime}:00" %></h4>
+  		<% end %>
+      <hr>
+      <div style="padding-left: 10%; padding-right: 10%;">
+        <div id="map" style="width: 100%; height: 500px;"></div>
     </div>
-    <script type="text/javascript">
-      var handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {disableDefaultUI: true }, internal: {id: 'map'}}, function(){
-        var json = [];
-        while (gon.firstlat.length >= 1) {
-          json.push({"lat":gon.firstlat.pop(), "lng":gon.firstlong.pop(), infowindow:gon.title.pop()});
-        }
-        markers = handler.addMarkers(json);
-        handler.bounds.extendWith(markers);
-        _.each(markers, function(marker){
-          google.maps.event.trigger(marker.getServiceObject(), 'click');
+      <script type="text/javascript">
+        var handler = Gmaps.build('Google');
+        handler.buildMap({ provider: {disableDefaultUI: true }, internal: {id: 'map'}}, function(){
+          var json = [];
+          while (gon.firstlat.length >= 1) {
+            json.push({"lat":gon.firstlat.pop(), "lng":gon.firstlong.pop(), infowindow:gon.title.pop()});
+          }
+          markers = handler.addMarkers(json);
+          handler.bounds.extendWith(markers);
+          _.each(markers, function(marker){
+            google.maps.event.trigger(marker.getServiceObject(), 'click');
+          });
+          handler.fitMapToBounds();     
         });
-        handler.fitMapToBounds();     
-      });
-    </script>
+      </script>
     </div>
-
 	<% end %>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
   </div>
 </div>
 
