@@ -41,7 +41,7 @@ Found and set up the Gmaps4rails and Underscore-Rails gems
     * Helped create the seed file for the database
 * Emily T:
     * Helped set up the models, views, and controllers
-    * Set up Devise gem & additional sign up/log in/edit profile features in the *     * Registration(s) controllers
+    * Set up Devise gem & additional sign up/log in/edit profile features in the Registration(s) controllers
     * Added ‘My Events’ features to Student (saving and showing events from homepage to schedule) and to Organization (creating events that show up on homepage and events page)
     * Used Gon gem to implement ability for Event locations (longitude/latitude) to show up on the map
     * Implemented front-end features like the navigation bar and the page layouts using Bootstrap
