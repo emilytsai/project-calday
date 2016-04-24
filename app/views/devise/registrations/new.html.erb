@@ -29,12 +29,11 @@
     <% end %>
 
     <% if resource_name == :organization %>
-
       <div class="form-group">
         <%= f.label :name %><br />
         <%= f.text_field :name, autofocus: true, class: 'form-control' %>
       </div>
-    
+
       <div class="form-group">
         <%= f.label :category %><br />
         <%= f.text_field :category, class: 'form-control' %>
