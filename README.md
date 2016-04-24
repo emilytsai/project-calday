@@ -11,15 +11,19 @@ The Cal Day Scheduler is a website where students can create personalized schedu
 #### Student
 * Students can sign up with their name, email, password, etc.
 * Students can edit their name, year, major, student ID, email, and password after logging in/signing up
+
 #### Organization
 * Organizations can sign up by providing their organization name, email, password, etc.
 * Organizations can edit their category, description, email, and password after logging in/signing up
 * Organizations can view their own events and create new events by providing an event title, description, and location
+
 #### Leader
 * Leaders can sign up by providing their organization name, email, password, etc.
 * Leaders can edit their name, year, major, student ID, email, and password after logging in/signing up
+
 #### Event
 * Events belong organizations and have titles, descriptions, and locations
+
 #### Schedule
 * Serves as a middle ground connecting events and students (has_many, through, belongs_to)
 
