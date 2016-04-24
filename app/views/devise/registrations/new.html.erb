@@ -11,7 +11,7 @@
       <%= f.text_field :name, autofocus: true, class: 'form-control' %>
     </div>
 
-    <% if resource_name == :student or resource_name == :leader %>
+    <% if resource_name == :student or resource_name = :leader %>
       <div class="form-group">
         <%= f.label :year %><br />
         <%= f.number_field :year, class: 'form-control' %>
