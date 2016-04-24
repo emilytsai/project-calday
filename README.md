@@ -8,20 +8,20 @@
 The Cal Day Scheduler is a website where students can create personalized schedules for Cal Day events. Students can create an account, see their profile information, list of scheduled events, and view which events they selected to attend. Organizations can also sign up for Cal Day and create their events for the students to view and attend. Leaders can sign up and view all the scheduled events so that they can stay on top of knowing when and where everything is for Cal Day.
 
 ### Models and Description:
-#### Students
-Students can sign up with their name, email, password, etc.
-Students can edit their name, year, major, student ID, email, and password after logging in/signing up
-#### Organizations
-Organizations can sign up by providing their organization name, email, password, etc.
-Organizations can edit their category, description, email, and password after logging in/signing up
-Organizations can view their own events and create new events by providing an event title, description, and location
-#### Leaders
-Leaders can sign up by providing their organization name, email, password, etc.
-Leaders can edit their name, year, major, student ID, email, and password after logging in/signing up
-#### Events
-Events belong organizations and have titles, descriptions, and locations
-Schedules
-Serves as a middle ground connecting events and students (has_many, through, belongs_to)
+#### Student
+* Students can sign up with their name, email, password, etc.
+* Students can edit their name, year, major, student ID, email, and password after logging in/signing up
+#### Organization
+* Organizations can sign up by providing their organization name, email, password, etc.
+* Organizations can edit their category, description, email, and password after logging in/signing up
+* Organizations can view their own events and create new events by providing an event title, description, and location
+#### Leader
+* Leaders can sign up by providing their organization name, email, password, etc.
+* Leaders can edit their name, year, major, student ID, email, and password after logging in/signing up
+#### Event
+* Events belong organizations and have titles, descriptions, and locations
+#### Schedule
+* Serves as a middle ground connecting events and students (has_many, through, belongs_to)
 
 ### Features:
 * The homepage invites users to sign up or log in; students, leaders, and organizations can select what category they belong to and sign up using their name, email, and password, and other attributes.
