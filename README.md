@@ -3,6 +3,8 @@
 ### Title: Cal Day Scheduler Project
 ### Team Members: Caroline Kim, Emily Pedersen, Alexander Ros, Emily Tsai
 ### Demo Link: 
+### Heroku Link: https://caldayscheduler.herokuapp.com/
+
 
 ## Idea:
 The Cal Day Scheduler is a website where students can create personalized schedules for Cal Day events. Students can create an account, see their profile information, list of scheduled events, and view which events they selected to attend. Organizations can also sign up for Cal Day and create their events for the students to view and attend. Leaders can sign up and view all the scheduled events so that they can stay on top of knowing when and where everything is for Cal Day.
