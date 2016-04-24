@@ -3,9 +3,10 @@
   <hr>
   <% @events.each do |f| %>
     <% if f.organization == current_organization.id %>
-      <h4>Event Title: <%= f.title %><h4>
-      <h4>Event Description: <%= f.description %><h4>
-      <h4>Start Time: <%= f.starttime %>:00<h4>
+      <h4><strong>Event Title:</strong> <%= f.title %><h4>
+      <h4><strong>Event Description:</strong> <%= f.description %><h4>
+      <h4><strong>Start Time:</strong> <%= f.starttime %>:00<h4>
+      <h4><strong>Location:</strong> <%= "Longitude: #{f.longitude} Latitude: #{f.latitude}" %><h4>
     <hr>
     <% end %>
   <% end %>
@@ -16,6 +17,7 @@
     <p>Title:</p><p><%= f.input_field :title %></p>
     <p>Description:</p><p><%= f.input_field :description %></p>
     <p>Start Time:</p><p><%= f.input_field :starttime %>:00 (Military time) Input a value 0-23.</p>
+    <p>When you create a new event, it will be assigned a location!</p>
     <%= f.button :submit %>
   <% end %>
 </div>
