@@ -4,10 +4,10 @@
 ### Team Members: Caroline Kim, Emily Pedersen, Alexander Ros, Emily Tsai
 ### Demo Link: 
 
-### Idea:
+## Idea:
 The Cal Day Scheduler is a website where students can create personalized schedules for Cal Day events. Students can create an account, see their profile information, list of scheduled events, and view which events they selected to attend. Organizations can also sign up for Cal Day and create their events for the students to view and attend. Leaders can sign up and view all the scheduled events so that they can stay on top of knowing when and where everything is for Cal Day.
 
-### Models and Description:
+## Models and Description:
 #### Student
 * Students can sign up with their name, email, password, etc.
 * Students can edit their name, year, major, student ID, email, and password after logging in/signing up
@@ -27,7 +27,7 @@ The Cal Day Scheduler is a website where students can create personalized schedu
 #### Schedule
 * Serves as a middle ground connecting events and students (has_many, through, belongs_to)
 
-### Features:
+## Features:
 * The homepage invites users to sign up or log in; students, leaders, and organizations can select what category they belong to and sign up using their name, email, and password, and other attributes.
     * When certain required fields are not entered (like the email address or the password), an error occurs (and the user cannot sign up)
     * Users that have already signed up can log in
@@ -37,7 +37,7 @@ The Cal Day Scheduler is a website where students can create personalized schedu
 * Each event has a geolocation and a map displaying where it is on campus
 * Students can save events to their personal schedule and view their saved schedule
 
-### Division of Labor:
+## Division of Labor:
 * Emily P:
     * Worked on the views for the Homepage to show the Google map of the locations of events on campus
     * Helped work on Student, Leader, and Organization controllers
