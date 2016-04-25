@@ -43,7 +43,7 @@ The Cal Day Scheduler is a website where students can create personalized schedu
 * Emily P:
     * Worked on the views for the Homepage to show the Google map of the locations of events on campus
     * Helped work on Student, Leader, and Organization controllers
-Found and set up the Gmaps4rails and Underscore-Rails gems
+    * Found and set up the Gmaps4rails and Underscore-Rails gems
     * Helped create the seed file for the database
 * Emily T:
     * Helped set up the models, views, and controllers
