@@ -2,7 +2,7 @@
 
 ### Title: Cal Day Scheduler Project
 ### Team Members: Caroline Kim, Emily Pedersen, Alexander Ros, Emily Tsai
-### Demo Link: 
+### Demo Link: https://www.youtube.com/watch?v=6ElQNRWOc7k&feature=youtu.be 
 ### Heroku Link: https://caldayscheduler.herokuapp.com/
 
 
